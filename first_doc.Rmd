@@ -2,18 +2,25 @@
 title: "First version control project"
 author: "Peter McGregor"
 date: "2023-04-24"
-output: html_document
+output: pdf_document
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-My first version controlled project in R Studio
-Let's create a test plot
+This project documents my ability to use Git and GitHub to version control an R Studio Project. I'll be modifying this report, staging and comitting changes and then pushing to GitHub
+
+Let's create a test plot of distance (miles) and speed (mph).
 
 ```{r test-plot}
-plot(cars)
+plot(cars, col ="red", xlab = "speed (mph)", ylab = "distance (miles)")
 ```
 
+a summary of the data frame is given below
+
+```{r, cars-summary}
+library(knitr)
+kable(summary(cars))
+```
 
