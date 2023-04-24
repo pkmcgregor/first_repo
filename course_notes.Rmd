@@ -1,0 +1,50 @@
+---
+title: "course notes"
+author: "Peter McGregor"
+date: "2023-04-24"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Statistical Analysis of (Behavioural) Data
+
+This is an R Markdown document containing notes from this PhD course taught in May 2023 at ISPA, Lisboa. 
+
+### Session 1. Introductions
+
+#### Course texts
+
+Intro2R web book is here intro2r.com with associated webpages here https://alexd106.github.io/intro2R/index.html
+
+Also Asking Questions in Biology 5th Edition (AQB 5th), this is available in dead tree and ebook versions, but neither is free. Important sections will be made available via the course Moodle.
+
+#### Final paper
+
+The final paper for this course will be this document. Note deadline 2nd June 2023 and that we have not yet been given info on how to submit. Might be via Moodle as in Dec 2022 course or via GitHub.
+
+#### downloading and summarizing data frames
+
+<!--
+this is an attempt to insert a code chunk
+-->
+
+```{r}
+whale <- read.table('data/whaledata.txt', header = TRUE, stringsAsFactors = TRUE)
+# also possible issue with sep = '\t',
+# works if omit or use sep = '',
+# trying to access from processed_data folder
+whale <- read.table('data/processed_data/whaledata.txt', header = TRUE, stringsAsFactors = TRUE)
+# trying data listing
+whale
+# yep, not brilliantly helpful
+# trying str() command
+str(whale)
+# works
+#trying summary()
+summary(whale)
+# works and shows number of whales has one missing value (NA)
+```
+
