@@ -2,7 +2,9 @@
 title: "First version control project"
 author: "Peter McGregor"
 date: "2023-04-24"
-output: pdf_document
+output:
+  html_document:
+    df_print: paged
 ---
 
 ```{r setup, include=FALSE}

@@ -2,7 +2,9 @@
 title: "course notes"
 author: "Peter McGregor"
 date: "2023-04-24"
-output: pdf_document
+output:
+  html_document:
+    df_print: paged
 ---
 
 ```{r setup, include=FALSE}
@@ -31,20 +33,6 @@ The final paper for this course will be this document. Note deadline 2nd June 20
 this is an attempt to insert a code chunk
 -->
 
-```{r}
-whale <- read.table('data/whaledata.txt', header = TRUE, stringsAsFactors = TRUE)
-# also possible issue with sep = '\t',
-# works if omit or use sep = '',
-# trying to access from processed_data folder
-whale <- read.table('data/processed_data/whaledata.txt', header = TRUE, stringsAsFactors = TRUE)
-# trying data listing
-whale
-# yep, not brilliantly helpful
-# trying str() command
-str(whale)
-# works
-#trying summary()
-summary(whale)
-# works and shows number of whales has one missing value (NA)
-```
+
+#### checking parametric HoV assumptions
 
